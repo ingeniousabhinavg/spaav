@@ -1,0 +1,43 @@
+
+/* paragraph style  */
+p{
+    text-align: justify;
+}
+/* paragraph style  */
+
+i{
+    color: aliceblue;
+}
+
+/* navbar style  */
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 1em;
+}
+.navbar .navbar-nav .nav-link:hover{
+    color: #030303; 
+    border: 1px dotted rgb(67, 34, 39);
+    background-color: #ffffff;
+    
+}
+/* navbar style  */
+
+a:link{
+    text-decoration: none;
+}
+
+/* card hover effect  */
+
+.chover:hover{
+    border: 1px dotted rgb(67, 34, 39);
+}
+
+
+/* card hover effect  */
+
+
+

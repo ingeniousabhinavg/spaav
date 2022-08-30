@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% block academics %}
+<h1 class="text-center bg-primary text-light p-3">SPAV Academics</h1>
+<br>
+<div class="container-fluid">
+  <div class="row g-2">
+    <!-- for navigation -->
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                <strong>SPAV Academics</strong>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <button class="nav-link active" id="v-pills-acadnews-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-acadnews" type="button" role="tab" aria-controls="v-pills-acadnews"
+                    aria-selected="true">Academics News</button>
+                  <br>
+                  <h6>Course Offered by SPAV</h6>
+                  <button class="nav-link" id="v-pills-barch-tab" data-bs-toggle="pill" data-bs-target="#v-pills-barch"
+                    type="button" role="tab" aria-controls="v-pills-barch" aria-selected="false"> Bachelor of
+                    Architecture</button>
+                  <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled"
+                    aria-selected="false" disabled>Disabled</button>
+                  <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                    aria-selected="false">Messages</button>
+                  <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                    aria-selected="false">Settings</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Exams
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Results
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- for navigation -->
+
+    <!-- for content  -->
+    <div class="col-sm-9">
+      <div class="card">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-acadnews" role="tabpanel"
+            aria-labelledby="v-pills-acadnews-tab" tabindex="0">
+            <div class="card-header">
+              <h5 class="text-center">Academics Latest Newss</h5>
+            </div>
+            <hr>
+            <table class="table">
+              {% for news in AcademicsNews_data %}
+              <tr>
+                <td><a href="{{news.file.url}}" target="_blank"><i class="bi bi-arrow-right-circle-fill text-dark"></i>&nbsp;{{news.title}}</a></td>
+                <td>{{news.date}}</td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+          <div class="tab-pane fade" id="v-pills-barch" role="tabpanel" aria-labelledby="v-pills-barch-tab"
+            tabindex="0">
+            <h5 class="text-center bg-dark text-light p-2"> Bachelor of Architecture</h5>
+            <hr>
+            <table class="table">
+              <tr>
+                <td>Name of the Programme :</td>
+                <td>Bachelor of Architecture</td>
+              </tr>
+              <tr>
+                <td>Abbreviation :</td>
+                <td>B.Arch</td>
+              </tr>
+              <tr>
+                <td>Year of Commencement :</td>
+                <td>2008</td>
+              </tr>
+              <tr>
+                <td>Department :</td>
+                <td>Architecture</td>
+              </tr>
+              <tr>
+                <td>Duration :</td>
+                <td>Five Years</td>
+              </tr>
+              <tr>
+                <td>Semester :</td>
+                <td>10(SEM)</td>
+              </tr>
+              <tr>
+                <td>Eligibility :</td>
+                <td>
+                  <p>The admission to the Bachelor of Architecture and Bachelor of Planning courses is made on the basis
+                    of Joint Seat Allocation Authority (JOSAA 2020). The students have to qualify the basic requirements
+                    as per Central Seat Allocation Board (CSAB). The criteria for admission as per CSAB 2020. <a
+                      href="">JOSAA</a> | <a href="">CSAB</a></p>
+                </td>
+              </tr>
+              <tr>
+                <td>Intake :</td>
+                <td>98</td>
+              </tr>
+              <tr>
+                <td>Objective :</td>
+                <td>
+                  <p>The key objective of the programme is to prepare the students for professional practice in the
+                    field of Architecture. Being an undergraduate programme, it has a broad scope, providing exposure to
+                    a variety of interests in this field and assisting students to discover their own directions for
+                    further development. The programme also aims at attaining a high level of excellence in
+                    Architectural Design. To this end, the design course is seen as the core of the programme with
+                    supportive inputs from courses in other streams viz., the Humanities, the Technological and the
+                    Professional, built upon a strong foundation of enabling skills in communications and data
+                    processing. The emphasis is on the development of faculties of discernment and decision-making with
+                    the aid of both objective information and subjective attitudes, based on reason.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>Credits :</td>
+                <td>300 (@30 / semester)</td>
+              </tr>
+              <tr>
+                <td>Marks :</td>
+                <td>12000 (@1200/semester)</td>
+              </tr>
+            </table>
+          </div>
+          <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab"
+            tabindex="0">...</div>
+          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
+            tabindex="0">...</div>
+          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
+            tabindex="0">...</div>
+        </div>
+
+        <div class="card-footer">
+          <!-- pagination start  -->
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-end">
+            {% if AcademicsNews_data.has_previous %}
+            <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{AcademicsNews_data.previous_page_number}}">Previous</a></li>
+            {% endif %}
+            
+            {% for n in total_pages %}
+            <li class="page-item"><a class="page-link" href="?page={{n}}">{{n}}</a></li>
+            {% endfor %}
+
+            {% if AcademicsNews_data.has_next %}
+            <li class="page-item"><a class="page-link" href="?page={{AcademicsNews_data.next_page_number}}">Next</a></li>
+            {% endif %}
+            <li class="page-item"><a class="page-link" href="?page={{last_page}}">Last Page</a></li>
+          </ul>
+        </nav>
+        <!-- pagination start  -->
+        </div>
+
+      </div>
+    </div>
+    <!-- for content  -->
+  </div>
+</div>
+<br>
+{% endblock academics %}

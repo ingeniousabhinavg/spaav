@@ -1,0 +1,1 @@
+web: gunicorn projectspav.wsgi --log-file -

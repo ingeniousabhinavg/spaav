@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block administration %}
+
+<section>
+    <div class="container-fluid">
+        <div class="row bg-primary text-dark p-2">
+            <h1 class="text-center">SPAV Administration</h1>
+        </div>
+        <br>
+        <div class="row">
+            {% for s in staffs_data %}
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">{{s.designation}}</div>
+                    <div class="card-body">
+                        <img src="{{s.image.url}}" alt="SPAV Staff" width="100px" height="200px" class="card-img">
+                        <br>
+                        <h5 class="card-heading">{{s.name}}</h5>
+                    </div>
+                    <div class="card-footer">...</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<br>
+{% endblock administration %}

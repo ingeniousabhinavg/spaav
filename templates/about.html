@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block about %}
+<section>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center">About</h1>
+            <hr>
+            <p>SPA Vijayawada is one of the three institutes of national importance, under the Ministry of Education (MoE), Government of India, offering education in the fields of Planning and Architecture. The School has distinguished itself and has grown as a role model in the professional education offering undergraduate, post graduate and doctoral programmes in the fields of planning and architecture, while at the same time fostering quality research in these domains. SPA Vijayawada is ranked one of the best technical institutes in the country by National Survey and Ranking, India Today Group, as well as holds the 8th Position in NIRF Ranking nationwide for Architecture. The campus is green rated and is equipped with state-of-the-art infrastructure such as hostels,central library, ICT enabled teaching atmosphere, high end digital surveillance systems, modern laboratories, spacious studios, classrooms, open air theatres, auditorium, cafeteria, outdoor sports facilities, etc.</p>
+            <p>All efforts are being made to develop the School as a place of excellence for innovation, creativity and research through the architecture and planning domains.Faculty members are constantly involved in various academics, research and developmental activities of the School.</p>
+            <div class="card botder border-warning">
+                <img src="{% static 'img/spavaboutn.jpg' %}" alt="" class="card-img">
+            </div>
+            <p>At SPA Vijayawada, academic degree programmes are designed to address physical, socio-economic and environmental challenges, so as to achieve future sustenance and hence to cater to the specific needs of the industry and academics. The key objective of these courses is to equip the students with adequate skills required, such as :-</p>
+            <p>  
+                1. To comprehend various built environment related issues <br>
+                2. To analyze physical, socio-economic, cultural, political and ecological dimensions of the human settlements.
+            </p>
+        </div>
+        <div class="row">
+            <h2 class="text-center">Presently the School runs two departments</h2>
+            <br>
+            <nav class="p-0">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Department of Planning</button>
+                  <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Department of Architecture</button>
+                </div>
+              </nav>
+              <div class="tab-content border border-light" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                    <img src="{% static 'img/spavaboutn.jpg' %}" alt="" class="card-img">
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                    <img src="{% static 'img/vision.jpg' %}" alt="" class="card-img">
+                </div>
+              </div>
+        </div>
+    </div>
+</section>
+<br>
+{% endblock about %}

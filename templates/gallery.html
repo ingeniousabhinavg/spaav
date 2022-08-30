@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block gallery %}
+<br>
+<section>
+    <div class="container-fluid p-1">
+        <div class="row g-2">
+            <div class="col-sm-9">
+                {% for g in gallery_data %}
+                <div class="card">
+                    <div class="card-header">{{g.eventName}}</div>
+                    <div class="card-body">
+                        <a href="{{g.galleryURL}}"><img src="{{g.banner.url}}" alt="" width="100px" height="200px" class="card-img"></a>
+                    </div>
+                </div>
+                <br>
+                {% endfor %}
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ex maiores enim soluta libero nobis adipisci doloremque doloribus facilis ipsa!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+{% endblock gallery %}

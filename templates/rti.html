@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block rti %}
+<section>
+    <div class="container-fluid p-0">
+        <div class="row">
+            <img src="{% static 'img/rti.jpg' %}" alt="" height="200px" class="card-img">
+        </div>
+    </div>
+    <div class="container-fluid p-4">
+        <div class="card">
+            <div class="card-header text-center"><strong>RTI(Right to Information)</strong></div>
+            <div class="card-body">
+                <p class="text-center">Right to information and obligations of public authorities
+                    Disclosures of documents u/s 4(1)(b) of RTI Act 2005</p>
+                <hr>
+                <p class="text-center"><a href=""><strong>THE RIGHT TO INFORMATION ACT, 2005 <i class="bi bi-box-arrow-up-right text-dark"></i></strong></a></p>
+                <hr>
+                <!-- information provided by institute under rti act 2005 -->
+                <table class="table">
+                    <tr>
+                        <th>Sl. No.</th>
+                        <th>Particulars</th>
+                        <th>Provided Informations</th>
+                    </tr>
+                    <tr>
+                        <td>01.</td>
+                        <td>Name of the organization</td>
+                        <td>योजना तथा वास्तुकला विद्यालय विजयवाड़ा | School of Planning And Architecture Vijayawada</td>
+                    </tr>
+                    <tr>
+                        <td>02.</td>
+                        <td>Functions and duties</td>
+                        <td>As per <a href="https://www.indiacode.nic.in/bitstream/123456789/2138/1/201437.pdf" target="_blank">SPA Act 2014 <i class="bi bi-box-arrow-up-right text-dark"></i> </a> and subsequent amendments thereon and <a href="http://www.bareactslive.com/ACA/ACT2970.HTM" target="_blank">SPA Statutes 2016 <i class="bi bi-box-arrow-up-right text-dark"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center bg-danger">More will be updated soon.......</td>
+                    </tr>
+                </table>
+                <!-- information provided by institute under rti act 2005 -->
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+{% endblock rti %}

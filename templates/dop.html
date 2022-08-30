@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block dop %}
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="card">
+        <img src="{% static 'img/aaaa.jpg' %}" alt="" height="200px" class="card-img">
+      </div>
+    </div>
+    <br>
+    <div class="row g-2">
+      <!-- navigation  -->
+      <div class="col-sm-3">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <button class="nav-link active border border-dark" id="v-pills-architecture-tab" data-bs-toggle="pill"
+            data-bs-target="#v-pills-architecture" type="button" role="tab" aria-controls="v-pills-architecture"
+            aria-selected="true">Architecture</button>
+          <button class="nav-link border border-dark" id="v-pills-faculty-tab" data-bs-toggle="pill"
+            data-bs-target="#v-pills-faculty" type="button" role="tab" aria-controls="v-pills-faculty"
+            aria-selected="false">Faculty</button>
+          <button class="nav-link border border-dark" id="v-pills-lplan-tab" data-bs-toggle="pill"
+            data-bs-target="#v-pills-lplan" type="button" role="tab" aria-controls="v-pills-lplan"
+            aria-selected="false" lplan>Lecture Plan</button>
+          <button class="nav-link border border-dark" id="v-pills-thesis-tab" data-bs-toggle="pill"
+            data-bs-target="#v-pills-thesis" type="button" role="tab" aria-controls="v-pills-thesis"
+            aria-selected="false">Thesis</button>
+          <button class="nav-link border border-dark" id="v-pills-coursestructure-tab" data-bs-toggle="pill"
+            data-bs-target="#v-pills-coursestructure" type="button" role="tab" aria-controls="v-pills-coursestructure"
+            aria-selected="false">Course Structure</button>
+        </div>
+      </div>
+      <!-- navigation  -->
+
+      <!-- data  -->
+      <div class="col-sm-9">
+        <div class="card p-2">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-architecture" role="tabpanel"
+              aria-labelledby="v-pills-architecture-tab" tabindex="0">
+              <h4 class="text-center">Department of Architecture</h4>
+              <hr>
+              <p>
+                The Department of Architecture offers undergraduate, postgraduate and doctoral programmes for achieving
+                excellence in the fields of Architecture. The academic programmes at SPA Vijayawada are designed to
+                address and to take up physical, socio-economic and environmental challenges, so as to achieve future
+                sustenance and hence to cater to the specific needs of the industry and academics. The key objective of
+                these courses is to equip the students with adequate skills required to comprehend various built
+                environment related issues and to analyse physical, socio-economic, cultural, political and ecological
+                dimensions of the human settlements. The academic programmes intend to contribute towards the creation
+                of professionals in the field. During the programme, the students are provided with ample opportunities
+                to interact with the subject experts, relevant organisations, etc., so as to make them understand and
+                update the current best practices. The postgraduate programmes enable the students to gain real-time
+                experience, through their involvement in the ongoing or live projects. Presently, a total of two
+                undergraduate degree programmes, seven post-graduate degree and doctoral programmes are being offered
+                currently. Moreover, the team is actively engaged in research oriented and various architectural
+                consultancy projects.
+                The Alumni of the Department are successfully working across India and the world as architects with the
+                government and renowned firms or have established their own private practice or freelancing endeavors.
+                The students of SPAV emerge as confident individuals with a diversified approach to address issues.
+                For detailed admission guidelines at UG & PG level in planning please <a href="">visit here</a>.
+              </p>
+              <h6 class="bg-warning p-2">Will be updated more...........</h6>
+            </div>
+            <div class="tab-pane fade" id="v-pills-faculty" role="tabpanel" aria-labelledby="v-pills-faculty-tab"
+              tabindex="0">
+            <h4 class="text-center">Department of Architecture</h4>
+            <h6 class="text-center">Faculty</h6>
+            <hr>
+            <div class="row g-2">
+              {% for f in facultyData %}
+              <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-header">{{f.facutyDesignation}}</div>
+                  <div class="card-body">
+                    <img src="{{f.facultyImage.url}}" alt="" height="200px" class="card-img">
+                    <h6 class="card-text">Name : {{f.facultyName}}</h6>
+                    <p>Phone : {{f.facultyPhone}}</p>
+                    <button class="btn btn-sm btn-primary"><a class="text-light" href="{{f.facultyCV.url}}">CV</a></button>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="card" aria-hidden="true">
+                  <img src="{% static 'img/aaaa.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title placeholder-glow">
+                      <span class="placeholder col-6"></span>
+                    </h5>
+                    <p class="card-text placeholder-glow">
+                      <span class="placeholder col-7"></span>
+                      <span class="placeholder col-4"></span>
+                      <span class="placeholder col-4"></span>
+                      <span class="placeholder col-6"></span>
+                      <span class="placeholder col-8"></span>
+                    </p>
+                    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <h6 class="bg-warning p-2">Will be updated dynamically...........</h6>
+            </div>
+            <div class="tab-pane fade" id="v-pills-lplan" role="tabpanel" aria-labelledby="v-pills-lplan-tab"
+              tabindex="0">
+              <h4 class="text-center">Architecture Lecture Plans</h4><hr>
+              <ul>
+                <li><a href="...">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, qui?</a></li>
+                <li><a href="...">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, qui?</a></li>
+                <li><a href="...">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, qui?</a></li>
+                <li><a href="...">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, qui?</a></li>
+                <li><a href="...">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, qui?</a></li>
+                <li><a href="...">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, qui?</a></li>
+                <li><a href="...">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, qui?</a></li>
+                <li><a href="...">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, qui?</a></li>
+                <li><a href="...">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, qui?</a></li>
+              </ul>
+              <h6 class="bg-warning p-2">Will be updated dynamically...........</h6>
+            </div>
+            <div class="tab-pane fade" id="v-pills-thesis" role="tabpanel" aria-labelledby="v-pills-thesis-tab"
+              tabindex="0">
+              <h4 class="text-center">Architecture Thesis</h4><hr>
+              <div class="row g-2">
+                <div class="col-sm-4">
+                  <div class="card">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id explicabo error, dolor veniam molestiae consequatur ipsam ea libero numquam tenetur?
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="card">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id explicabo error, dolor veniam molestiae consequatur ipsam ea libero numquam tenetur?
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="card">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id explicabo error, dolor veniam molestiae consequatur ipsam ea libero numquam tenetur?
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row g-2">
+                <div class="col-sm-4">
+                  <div class="card">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id explicabo error, dolor veniam molestiae consequatur ipsam ea libero numquam tenetur?
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="card">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id explicabo error, dolor veniam molestiae consequatur ipsam ea libero numquam tenetur?
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="card">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id explicabo error, dolor veniam molestiae consequatur ipsam ea libero numquam tenetur?
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <h6 class="bg-warning p-2">Will be updated dynamically...........</h6>
+            </div>
+            <div class="tab-pane fade" id="v-pills-coursestructure" role="tabpanel" aria-labelledby="v-pills-coursestructure-tab"
+              tabindex="0">
+              <h4 class="text-center">Architecture Course Structure</h4><hr>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- data  -->
+    </div>
+  </div>
+</section>
+<br>
+{% endblock dop %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block noticeboard %}
+<section>
+    <div class="container-fluid">
+        <div class="row p-4 bg-light">
+            <div class="card border border-primary p-0">
+                <div class="card-header text-center"><strong>Welcome to Noticeboard</strong></div>
+                <div class="card-body">
+                    <ul>
+                        <table class="table">
+                            {% for n in noticeData %}
+                            <tr>
+                                <td>
+                                    <a href="{{n.file.url}}" target="_blank">{{n.noticeTitle}}</a>
+                                </td>
+                                <td>{{n.noticedate}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <!-- pagination start  -->
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-end">
+                            {% if noticeData.has_previous %}
+                            <li class="page-item"><a class="page-link"
+                                href="?page={{noticeData_data.previous_page_number}}">Previous</a></li>
+                                {% endif %}
+                                <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+
+                            {% for n in total_pages %}
+                            <li class="page-item"><a class="page-link" href="?page={{n}}">{{n}}</a></li>
+                            {% endfor %}
+
+                            {% if AcademicsNews_data.has_next %}
+                            <li class="page-item"><a class="page-link"
+                                    href="?page={{noticeData_data.next_page_number}}">Next</a></li>
+                            {% endif %}
+                            <li class="page-item"><a class="page-link" href="?page={{last_page}}">Last Page</a></li>
+                        </ul>
+                    </nav>
+                    <!-- pagination start  -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock noticeboard %}
