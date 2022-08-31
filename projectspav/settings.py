@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-)dncm0md_qk6b%qp#0)ois*7=$$)4b8qt(ouswh9gu7uh#l)h8
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','spaav.herokuapp.com']
 
@@ -40,7 +40,7 @@ ALLOWED_HOSTS = ['127.0.0.1','spaav.herokuapp.com']
 INSTALLED_APPS = [
     'academics',
     'spav',
-    # 'EasyVisitors',
+    'EasyVisitors',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'EasyVisitors.middleware.VisitorCounterMiddleware',
+    'EasyVisitors.middleware.VisitorCounterMiddleware',
 ]
 
 ROOT_URLCONF = 'projectspav.urls'
