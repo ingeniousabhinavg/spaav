@@ -6,30 +6,35 @@
         <div class="col-sm-9">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="{% static 'img/aaaa.jpg' %}" class="d-block w-100" height="400px" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="{% static 'img/the.jpg' %}" class="d-block w-100" height="400px" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="{% static 'img/thebg.jpg' %}" class="d-block w-100" height="400px" alt="...">
-                  </div>
+                    <div class="carousel-item active">
+                        <img src="{% static 'img/aaaa.jpg' %}" class="d-block w-100" height="400px" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'img/the.jpg' %}" class="d-block w-100" height="400px" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'img/thebg.jpg' %}" class="d-block w-100" height="400px" alt="...">
+                    </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+            </div>
         </div>
         <div class="col-sm-3">
             <div class="card border border-primary">
@@ -44,7 +49,8 @@
                     <h6>Upcoming Events/Lectures</h6>
                     <ul>
                         {% for u in lecture_data %}
-                        <li><a href="{{u.lectBanner.url}}">{{u.lectTitle |slice:30}}</a>&nbsp;&nbsp; | <span><a href="{{u.lectlink}}" target="_blank">Join</a></span></li>
+                        <li><a href="{{u.lectBanner.url}}">{{u.lectTitle |slice:30}}</a>&nbsp;&nbsp; | <span><a
+                                    href="{{u.lectlink}}" target="_blank">Join</a></span></li>
                         {% endfor %}
                     </ul>
                     <a href="/upcoming-lectures">View More</a>
@@ -56,9 +62,11 @@
 
 <div class="container-fluid p-0">
     <div class="row bg-light text-dark p-2">
-        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="10" >
+        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"
+            scrollamount="10">
             {% for fn in flash_news %}
-           <img src="{{fn.newsImg.url}}" alt=""> <a href="{{fn.newsLink}}" target="_blank">{{fn.newsTitle}}</a> &nbsp; &nbsp; | &nbsp;&nbsp;
+            <img src="{{fn.newsImg.url}}" alt=""> <a href="{{fn.newsLink}}" target="_blank">{{fn.newsTitle}}</a> &nbsp;
+            &nbsp; | &nbsp;&nbsp;
             {% endfor%}
         </marquee>
     </div>
@@ -105,17 +113,30 @@
             <div class="card">
                 <div class="card-body">
                     <h6>About SPAV</h6>
-                    <p>"School of Planning and Architecture, Vijayawada, (in short SPAV), was established on July 7, 2008 by the Ministry of Human Resource Development (MoE), Government of India, as an autonomous institution. SPAV is a premier Centrally Funded Technical Institution (CFTI) directly under the MoE, for excellence in the fields of Planning and Architecture. Although in its nascent stage, with experienced faculty and guest lectures by eminent visiting faculty and industry experts from all over the country, the quality of education imparted and its focus on research puts SPAV in the league of leading institutes in the country."</p>
-                    <button type="button" class="btn btn-warning btn-sm"><a href="/about" class="text-dark">more</a></button> 
+                    <p>"School of Planning and Architecture, Vijayawada, (in short SPAV), was established on July 7,
+                        2008 by the Ministry of Human Resource Development (MoE), Government of India, as an autonomous
+                        institution. SPAV is a premier Centrally Funded Technical Institution (CFTI) directly under the
+                        MoE, for excellence in the fields of Planning and Architecture. Although in its nascent stage,
+                        with experienced faculty and guest lectures by eminent visiting faculty and industry experts
+                        from all over the country, the quality of education imparted and its focus on research puts SPAV
+                        in the league of leading institutes in the country."</p>
+                    <button type="button" class="btn btn-warning btn-sm"><a href="/about"
+                            class="text-dark">more</a></button>
                 </div>
             </div>
         </div>
         <div class="col-sm-4">
             <div class="card">
                 <div class="card-body">
-                    <iframe class="card-img" width="250" height="150" src="https://www.youtube.com/embed/8Pp3OOYOHe0" title="Glimpse of SPAV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="card-img" width="250" height="150" src="https://www.youtube.com/embed/8Pp3OOYOHe0"
+                        title="Glimpse of SPAV" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                     <hr>
-                    <iframe class="card-img" width="250" height="150" src="https://www.youtube.com/embed/8Pp3OOYOHe0" title="Glimpse of SPAV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="card-img" width="250" height="150" src="https://www.youtube.com/embed/8Pp3OOYOHe0"
+                        title="Glimpse of SPAV" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -123,14 +144,16 @@
             <div class="card">
                 <div class="card-body">
                     <h6>VISION</h6>
-                    <p>“ To achieve academic excellence in Architecture and Planning through innovating, creating, acquiring and disseminating knowledge using sustainable local and global practices and enhancing the quality of society through responsible built environment. ”</p>
+                    <p>“ To achieve academic excellence in Architecture and Planning through innovating, creating,
+                        acquiring and disseminating knowledge using sustainable local and global practices and enhancing
+                        the quality of society through responsible built environment. ”</p>
                     <img src="{% static 'img/vision.jpg' %}" height="170px" alt="" class="card-img">
                 </div>
             </div>
         </div>
     </div>
     <br>
-    
+
 </div>
 <br><br>
 <div class="container-fluid bg-primary p-0">
@@ -148,7 +171,7 @@
                 <div class="card-header bg-info">Director's Message</div>
                 <div class="card-body">
                     <h3 class="card-heading">{{d.name}}</h3>
-                    <p>{{d.message |slice:850}}</p>           
+                    <p>{{d.message |slice:850}}</p>
                     <a href="/director">Read More</a>
                 </div>
             </div>
@@ -163,30 +186,84 @@
     <div class="row">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                    type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+                <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane"
+                    type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false"
+                    disabled>Disabled</button>
             </li>
-          </ul>
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active overflow-auto" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae dolore odit ad fugit nesciunt, sequi similique unde dolorem tempore vel, pariatur quibusdam eos, tenetur accusantium quis animi culpa? Aspernatur blanditiis enim amet quae distinctio totam nostrum eveniet expedita autem error quas perspiciatis ab, omnis illo dolorum inventore, eius voluptas minus dolore itaque, voluptate similique. Quia, cum? Officia, id! Sed aperiam fugit cum ut impedit odit magnam dolore possimus, pariatur ab. Provident maiores excepturi sed cumque laborum suscipit, eligendi labore impedit quae dolorem saepe repellendus odio obcaecati itaque vel ab consequuntur deserunt aspernatur. Sapiente sequi accusamus ullam consectetur possimus laboriosam, doloremque velit, vero deleniti tempora, quae saepe? Dolores quidem facere perspiciatis tempora quas delectus fugiat quibusdam ipsum ad, obcaecati neque officiis consectetur fuga atque eaque explicabo accusamus impedit dicta deleniti deserunt. Explicabo dignissimos ex illum iure animi corrupti porro error, quae possimus sint voluptas ea, ipsa veniam reprehenderit quisquam dolor nostrum fugit libero ipsum quam optio ipsam nisi? Hic itaque numquam beatae? Animi non debitis quis fugiat itaque nulla aspernatur in autem, voluptates maxime repellendus delectus nisi corporis. Possimus dolorum dolor incidunt ipsam sunt harum laborum, sed mollitia placeat doloribus maxime odio provident laudantium, quas voluptatum asperiores praesentium, enim fugiat.</p>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active overflow-auto" id="home-tab-pane" role="tabpanel"
+                aria-labelledby="home-tab" tabindex="0">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae dolore odit ad fugit
+                    nesciunt, sequi similique unde dolorem tempore vel, pariatur quibusdam eos, tenetur accusantium quis
+                    animi culpa? Aspernatur blanditiis enim amet quae distinctio totam nostrum eveniet expedita autem
+                    error quas perspiciatis ab, omnis illo dolorum inventore, eius voluptas minus dolore itaque,
+                    voluptate similique. Quia, cum? Officia, id! Sed aperiam fugit cum ut impedit odit magnam dolore
+                    possimus, pariatur ab. Provident maiores excepturi sed cumque laborum suscipit, eligendi labore
+                    impedit quae dolorem saepe repellendus odio obcaecati itaque vel ab consequuntur deserunt
+                    aspernatur. Sapiente sequi accusamus ullam consectetur possimus laboriosam, doloremque velit, vero
+                    deleniti tempora, quae saepe? Dolores quidem facere perspiciatis tempora quas delectus fugiat
+                    quibusdam ipsum ad, obcaecati neque officiis consectetur fuga atque eaque explicabo accusamus
+                    impedit dicta deleniti deserunt. Explicabo dignissimos ex illum iure animi corrupti porro error,
+                    quae possimus sint voluptas ea, ipsa veniam reprehenderit quisquam dolor nostrum fugit libero ipsum
+                    quam optio ipsam nisi? Hic itaque numquam beatae? Animi non debitis quis fugiat itaque nulla
+                    aspernatur in autem, voluptates maxime repellendus delectus nisi corporis. Possimus dolorum dolor
+                    incidunt ipsam sunt harum laborum, sed mollitia placeat doloribus maxime odio provident laudantium,
+                    quas voluptatum asperiores praesentium, enim fugiat.</p>
             </div>
-            <div class="tab-pane fade overflow-auto" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae dolore odit ad fugit nesciunt, sequi similique unde dolorem tempore vel, pariatur quibusdam eos, tenetur accusantium quis animi culpa? Aspernatur blanditiis enim amet quae distinctio totam nostrum eveniet expedita autem error quas perspiciatis ab, omnis illo dolorum inventore, eius voluptas minus dolore itaque, voluptate similique. Quia, cum? Officia, id! Sed aperiam fugit cum ut impedit odit magnam dolore possimus, pariatur ab. Provident maiores excepturi sed cumque laborum suscipit, eligendi labore impedit quae dolorem saepe repellendus odio obcaecati itaque vel ab consequuntur deserunt aspernatur. Sapiente sequi accusamus ullam consectetur possimus laboriosam, doloremque velit, vero deleniti tempora, quae saepe? Dolores quidem facere perspiciatis tempora quas delectus fugiat quibusdam ipsum ad, obcaecati neque officiis consectetur fuga atque eaque explicabo accusamus impedit dicta deleniti deserunt. Explicabo dignissimos ex illum iure animi corrupti porro error, quae possimus sint voluptas ea, ipsa veniam reprehenderit quisquam dolor nostrum fugit libero ipsum quam optio ipsam nisi? Hic itaque numquam beatae? Animi non debitis quis fugiat itaque nulla aspernatur in autem, voluptates maxime repellendus delectus nisi corporis. Possimus dolorum dolor incidunt ipsam sunt harum laborum, sed mollitia placeat doloribus maxime odio provident laudantium, quas voluptatum asperiores praesentium, enim fugiat.</p>
+            <div class="tab-pane fade overflow-auto" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                tabindex="0">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae dolore odit ad fugit
+                    nesciunt, sequi similique unde dolorem tempore vel, pariatur quibusdam eos, tenetur accusantium quis
+                    animi culpa? Aspernatur blanditiis enim amet quae distinctio totam nostrum eveniet expedita autem
+                    error quas perspiciatis ab, omnis illo dolorum inventore, eius voluptas minus dolore itaque,
+                    voluptate similique. Quia, cum? Officia, id! Sed aperiam fugit cum ut impedit odit magnam dolore
+                    possimus, pariatur ab. Provident maiores excepturi sed cumque laborum suscipit, eligendi labore
+                    impedit quae dolorem saepe repellendus odio obcaecati itaque vel ab consequuntur deserunt
+                    aspernatur. Sapiente sequi accusamus ullam consectetur possimus laboriosam, doloremque velit, vero
+                    deleniti tempora, quae saepe? Dolores quidem facere perspiciatis tempora quas delectus fugiat
+                    quibusdam ipsum ad, obcaecati neque officiis consectetur fuga atque eaque explicabo accusamus
+                    impedit dicta deleniti deserunt. Explicabo dignissimos ex illum iure animi corrupti porro error,
+                    quae possimus sint voluptas ea, ipsa veniam reprehenderit quisquam dolor nostrum fugit libero ipsum
+                    quam optio ipsam nisi? Hic itaque numquam beatae? Animi non debitis quis fugiat itaque nulla
+                    aspernatur in autem, voluptates maxime repellendus delectus nisi corporis. Possimus dolorum dolor
+                    incidunt ipsam sunt harum laborum, sed mollitia placeat doloribus maxime odio provident laudantium,
+                    quas voluptatum asperiores praesentium, enim fugiat.</p>
             </div>
-            <div class="tab-pane fade overflow-auto" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae dolore odit ad fugit nesciunt, sequi similique unde dolorem tempore vel, pariatur quibusdam eos, tenetur accusantium quis animi culpa? Aspernatur blanditiis enim amet quae distinctio totam nostrum eveniet expedita autem error quas perspiciatis ab, omnis illo dolorum inventore, eius voluptas minus dolore itaque, voluptate similique. Quia, cum? Officia, id! Sed aperiam fugit cum ut impedit odit magnam dolore possimus, pariatur ab. Provident maiores excepturi sed cumque laborum suscipit, eligendi labore impedit quae dolorem saepe repellendus odio obcaecati itaque vel ab consequuntur deserunt aspernatur. Sapiente sequi accusamus ullam consectetur possimus laboriosam, doloremque velit, vero deleniti tempora, quae saepe? Dolores quidem facere perspiciatis tempora quas delectus fugiat quibusdam ipsum ad, obcaecati neque officiis consectetur fuga atque eaque explicabo accusamus impedit dicta deleniti deserunt. Explicabo dignissimos ex illum iure animi corrupti porro error, quae possimus sint voluptas ea, ipsa veniam reprehenderit quisquam dolor nostrum fugit libero ipsum quam optio ipsam nisi? Hic itaque numquam beatae? Animi non debitis quis fugiat itaque nulla aspernatur in autem, voluptates maxime repellendus delectus nisi corporis. Possimus dolorum dolor incidunt ipsam sunt harum laborum, sed mollitia placeat doloribus maxime odio provident laudantium, quas voluptatum asperiores praesentium, enim fugiat.</p>
+            <div class="tab-pane fade overflow-auto" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                tabindex="0">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae dolore odit ad fugit
+                    nesciunt, sequi similique unde dolorem tempore vel, pariatur quibusdam eos, tenetur accusantium quis
+                    animi culpa? Aspernatur blanditiis enim amet quae distinctio totam nostrum eveniet expedita autem
+                    error quas perspiciatis ab, omnis illo dolorum inventore, eius voluptas minus dolore itaque,
+                    voluptate similique. Quia, cum? Officia, id! Sed aperiam fugit cum ut impedit odit magnam dolore
+                    possimus, pariatur ab. Provident maiores excepturi sed cumque laborum suscipit, eligendi labore
+                    impedit quae dolorem saepe repellendus odio obcaecati itaque vel ab consequuntur deserunt
+                    aspernatur. Sapiente sequi accusamus ullam consectetur possimus laboriosam, doloremque velit, vero
+                    deleniti tempora, quae saepe? Dolores quidem facere perspiciatis tempora quas delectus fugiat
+                    quibusdam ipsum ad, obcaecati neque officiis consectetur fuga atque eaque explicabo accusamus
+                    impedit dicta deleniti deserunt. Explicabo dignissimos ex illum iure animi corrupti porro error,
+                    quae possimus sint voluptas ea, ipsa veniam reprehenderit quisquam dolor nostrum fugit libero ipsum
+                    quam optio ipsam nisi? Hic itaque numquam beatae? Animi non debitis quis fugiat itaque nulla
+                    aspernatur in autem, voluptates maxime repellendus delectus nisi corporis. Possimus dolorum dolor
+                    incidunt ipsam sunt harum laborum, sed mollitia placeat doloribus maxime odio provident laudantium,
+                    quas voluptatum asperiores praesentium, enim fugiat.</p>
             </div>
-            <div class="tab-pane fade overflow-auto" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
-          </div> 
+            <div class="tab-pane fade overflow-auto" id="disabled-tab-pane" role="tabpanel"
+                aria-labelledby="disabled-tab" tabindex="0">...</div>
+        </div>
     </div>
 </div>
 <br>
@@ -195,20 +272,35 @@
     <div class="row">
         <div class="d-flex align-items-start">
             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
-              <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
-              <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Disabled</button>
-              <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
-              <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                    aria-selected="true">Home</button>
+                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                    aria-selected="false">Profile</button>
+                <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled"
+                    aria-selected="false" disabled>Disabled</button>
+                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                    aria-selected="false">Messages</button>
+                <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                    aria-selected="false">Settings</button>
             </div>
             <div class="tab-content" id="v-pills-tabContent">
-              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">...</div>
-              <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">...</div>
-              <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">...</div>
-              <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>
-              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                    aria-labelledby="v-pills-home-tab" tabindex="0">...</div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
+                    tabindex="0">...</div>
+                <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab"
+                    tabindex="0">...</div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
+                    tabindex="0">...</div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
+                    tabindex="0">...</div>
             </div>
-          </div>
+        </div>
     </div>
 </div>
 <br><br><br><br>
