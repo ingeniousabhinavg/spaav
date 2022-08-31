@@ -51,3 +51,11 @@ class Faculty(models.Model):
 
     def __str__(self) -> str:
         return self.facultyName
+
+class Tender(models.Model):
+    tenderTitle = models.CharField(max_length=254)
+    tenderFile = models.FileField(upload_to='tender', null=False)
+    tenderLastDate = models.DateTimeField('datetime', blank=False)
+
+    def __str__(self) -> str:
+        return self.tenderTitle

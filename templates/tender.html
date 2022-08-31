@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block tender %}
+<br>
+<section>
+    <div class="container-fluid">
+        <div class="row g-0 p-2">
+            <div class="card">
+                <div class="card-header text-center">Tender</div>
+                <div class="card-body">
+                    <table class="table">
+                        <tr>
+                            <th>Tender Name</th>
+                            <th>Tender Last Date</th>
+                        </tr>
+                        {% for t in tenderData %}
+                        <tr>
+                            <td><a href="{{t.tenderFile.url}}"><i class="bi bi-arrow-right-circle-fill text-dark"></i>&nbsp;&nbsp;{{t.tenderTitle}}</a></td>
+                            <td>{{t.tenderLastDate}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <!-- pagination start  -->
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-end">
+                            {% if tenderData.has_previous %}
+                            <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                            <li class="page-item"><a class="page-link"
+                                    href="?page={{AcademicsNews_data.previous_page_number}}">Previous</a></li>
+                            {% endif %}
+
+                            {% for n in total_pages %}
+                            <li class="page-item"><a class="page-link" href="?page={{n}}">{{n}}</a></li>
+                            {% endfor %}
+
+                            {% if tenderData.has_next %}
+                            <li class="page-item"><a class="page-link"
+                                    href="?page={{AcademicsNews_data.next_page_number}}">Next</a></li>
+                            {% endif %}
+                            <li class="page-item"><a class="page-link" href="?page={{last_page}}">Last Page</a></li>
+                        </ul>
+                    </nav>
+                    <!-- pagination start  -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+{% endblock tender %}

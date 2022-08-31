@@ -1,6 +1,6 @@
 from multiprocessing import context
 from django.shortcuts import render
-from .models import FlashNews, Logos, Noticeboard,Faculty
+from .models import Tender, Faculty, Noticeboard, Logos, FlashNews
 from django.core.paginator import Paginator
 # Call the objects 
 
@@ -37,14 +37,28 @@ def noticeboard(request):
     }
     return render(request, 'noticeboard.html',dataDict)
 
-def screen(request):
-    return render(request, 'screen_reader.html')
+def tender(request):
+    tenderData = Tender.objects.all()
+    paginator = Paginator(tenderData, 3)
+    page_number = request.GET.get('page')
+    final_tender = paginator.get_page(page_number)
+    total_pages = final_tender.paginator.num_pages
+    last_page = final_tender.paginator.num_pages
+    tenderDict = {
+    'tenderData':final_tender,
+    'total_pages':[n+1 for n in range(total_pages)],
+    'last_page':last_page
+    }
+    return render(request, 'tender.html',tenderDict)
 
 def rti(request):
     return render(request, 'rti.html')
 
 def gallery(request):
     return render(request,  'gallery.html')
+
+def screen(request):
+    return render(request, 'screen_reader.html')
 
 def policies(request):
     return render(request,  'policies.html')
