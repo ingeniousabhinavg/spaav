@@ -4,6 +4,10 @@ from .import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('bog/', views.bog, name='bog'),
+    path('director/', views.director, name='director'),
+    path('about/', views.about, name='about'),
+    path('achivements/', views.achivements, name='achivements'),
     path('planning/', views.planning, name='planning'),
     path('noticeboard/', views.noticeboard, name='noticeboard'),
     path('tender/', views.tender, name='tender'),

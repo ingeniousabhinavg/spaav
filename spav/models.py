@@ -1,5 +1,8 @@
+from distutils.command.upload import upload
+from email.policy import default
 from secrets import choice
 from typing import Tuple
+from unicodedata import name
 from django.db import models
 
 # Create your models here.
@@ -59,3 +62,76 @@ class Tender(models.Model):
 
     def __str__(self) -> str:
         return self.tenderTitle
+
+class Achivements(models.Model):
+    achiveTitle = models.CharField(max_length=200)
+    aciveFile = models.FileField(upload_to='achivements')
+    achiveUrl = models.URLField( max_length=200)
+    achiveDate = models.DateField(auto_now=False, auto_now_add=False)
+    
+    def __str__(self) -> str:
+        return self.achiveTitle
+
+
+
+# Administration #
+class BOG(models.Model):
+    name = models.CharField(max_length=200)
+    designation = models.CharField(max_length=50)
+    date = models.DateTimeField(auto_now=False, auto_now_add=False)
+
+    def __str__(self) -> str:
+        return self.name
+
+class Director(models.Model):
+    name = models.CharField(max_length=300)
+    designation_choices = (
+        ('Director', 'Director'),
+        ('Director in Charge', 'Director in Charge'),
+        ('Dy Director', 'Dy Director'),
+    )
+    designation = models.CharField(max_length=100, choices=designation_choices)
+    qualification = models.CharField(max_length=200)
+    phone = models.CharField(max_length=40)
+    email = models.EmailField(max_length=200)
+    cv = models.FileField(upload_to='director/cv')
+    image = models.ImageField(upload_to='director/profile')
+    joinedOn = models.DateTimeField( blank=False)
+    about = models.TextField()
+    message = models.TextField()
+
+    def __str__(self) -> str:
+        return self.name
+
+class Registrar(models.Model):
+    pass
+
+class Deans(models.Model):
+    pass
+
+# Administration #
+
+# commitiees #
+class NIRFCell(models.Model):
+    pass
+
+class StudentsGriveance(models.Model):
+    pass
+
+class VegilanceOfficer(models.Model):
+    pass
+
+class MentalHealth(models.Model):
+    pass
+
+class TranninPlacement(models.Model):
+    pass
+
+class UBA(models.Model):
+    pass
+
+class EBSB(models.Model):
+    pass
+
+# more will be added soon
+# commitiees #

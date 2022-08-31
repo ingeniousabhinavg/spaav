@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block achivements %}
+<section>
+    <div class="container-fluid p-2">
+        <div class="row p-0">
+           <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header text-center"><strong>Achievements</strong></div>
+                <div class="card-body">
+                    <table class="table">
+                        <tr>
+                            <th>Achivements</th>
+                            <th>Link<i class="bi bi-share-fill"></i></th>
+                            <th>Date</th>
+                        </tr>
+                        {% for a in achivementsData %}
+                        <tr>
+                            <td><i class="bi bi-arrow-right-circle-fill text-dark"></i>&nbsp;&nbsp;<a
+                                    href="{{a.aciveFile.url}}">{{a.achiveTitle}}</a></td>
+                            <td><a href="{{a.achiveUrl}}" target="_blank"><i
+                                        class="bi bi-box-arrow-up-right text-primary"></i></a></td>
+                            <td>{{a.achiveDate}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <!-- pagination start  -->
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-end">
+                            {% if achivementsData.has_previous %}
+                            <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                            <li class="page-item"><a class="page-link"
+                                    href="?page={{achivementsData.previous_page_number}}">Previous</a></li>
+                            {% endif %}
+
+                            {% for n in total_pages %}
+                            <li class="page-item"><a class="page-link" href="?page={{n}}">{{n}}</a></li>
+                            {% endfor %}
+
+                            {% if achivementsData.has_next %}
+                            <li class="page-item"><a class="page-link"
+                                    href="?page={{achivementsData.next_page_number}}">Next</a></li>
+                            {% endif %}
+                            <li class="page-item"><a class="page-link" href="?page={{last_page}}">Last Page</a></li>
+                        </ul>
+                    </nav>
+                    <!-- pagination start  -->
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+</section>
+{% endblock achivements %}

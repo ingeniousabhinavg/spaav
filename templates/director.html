@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block director %}
+<section>
+    <h1 class="text-center bg-primary text-light p-4">Director's Page</h1>
+    <hr>
+    <div class="container-fluid p-1">
+        <div class="row g-1">
+            <div class="col-sm-8">
+                {% for d in Director %}
+                <div class="card">
+                    <div class="card-body">
+                        <h6>About</h6>
+                        <p class="card-text">{{d.about}}</p>
+                        <h4 class="card-text">Message</h4>
+                        <p class="card-text">{{d.message}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="col-sm-4">
+                {% for d in Director %}
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{d.image.url}}" alt="{{d.name}}" class="card-img">
+                        <hr>
+                        <h4 class="card-text">{{d.name}}</h4>
+                        <p><strong>{{d.designation}}</strong>
+                            <small class="text-muted">(Sience :{{d.joinedOn}})</small>
+                        </p>
+                        <h6>Qualification</h6>
+                        <p>{{d.qualification}}</p>
+                        <hr>
+                        <h6>Contact</h6>
+                        <p>{{d.phone}}</p>
+                        <i class="bi bi-envelope-fill text-dark"></i>&nbsp;&nbsp;<a href="mailto:{{d.email}}" class="chover">Send an
+                            Email</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row p-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed bg-primary text-light" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Recent Director's
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body border border-primary">
+                                <table class="table">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Contact</th>
+                                        <th>Term</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Name of the Director</td>
+                                        <td><a href="mailto:">Email</a></td>
+                                        <td><a href="mailto:">From --- TO </a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Name of the Director</td>
+                                        <td><a href="mailto:">Email</a></td>
+                                        <td><a href="mailto:">From --- TO </a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Name of the Director</td>
+                                        <td><a href="mailto:">Email</a></td>
+                                        <td><a href="mailto:">From --- TO </a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Name of the Director</td>
+                                        <td><a href="mailto:">Email</a></td>
+                                        <td><a href="mailto:">From --- TO </a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock director %}

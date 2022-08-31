@@ -1,22 +1,26 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>School of Planning and Architecture, Vijayawada</title>
     <link rel="shortcut icon" href="{% static 'img/favicon_spav.png' %}" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- custom css  -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
+
   <body>
     <header>
       <div class="container-fluid p-0">
         <div class="d-flex bg-primary">
           <div class="p-2 flex-grow-1"><a class="text-light" href="/">Time</a></div>
           <div class="p-2"><a href="/"><i class="bi bi-envelope-heart-fill"></i></a></div>
+          <div class="p-2"><a href="/admin"><i class="bi bi-person-circle"></i></a></div>
           <div class="p-2"><a href="/"><i class="bi bi-house-heart-fill"></i></a></div>
           <div class="p-2"><a href="/"><i class="bi bi-youtube"></i></a></div>
           <div class="p-2"><a href="/"><i class="bi bi-youtube"></i></a></div>
@@ -45,140 +49,187 @@
       <nav class="navbar border border-dark p-1 navbar-expand-lg bg-warning">
         <div class="container-fluid">
           <!-- <a class="navbar-brand " href="/"><strong>SPAV</strong></a> -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   About
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/about">About</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="/achivements">Achievements</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
             </ul>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   Institution
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/institute">Institute</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/actsnstatute">Acts & Statute</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="/bog">Board of Governors</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="/administration">Administration</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="/director">Director</a></li>
                 </ul>
               </li>
             </ul>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   Academics
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/academics">Academics</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="/upcoming-lectures">Upcoming Lectures</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
             </ul>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   Departments
                 </a>
                 <ul class="dropdown-menu bg-info">
                   <li><a class="dropdown-item" href="/planning">Department of Planning</a></li>
                   <li><a class="dropdown-item" href="/faculty">Faculty</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="/architecture">Department of Architecture</a></li>
                 </ul>
               </li>
             </ul>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 Central Facalities
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Central Facalities
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Action</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
             </ul>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   Research & Innovation
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Action</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
             </ul>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   Collabration
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Action</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
             </ul>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   Student's Corner
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Action</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
             </ul>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   Gallery
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/gallery">Events</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="#">Student Works</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
             </ul>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   Contacts
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/contacts">Contacts</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
@@ -229,27 +280,27 @@
     {% block about %}
     {% endblock about %}
     <!-- about page  -->
-    
+
     <!-- doa page  -->
     {% block doa %}
     {% endblock doa %}
     <!-- doa page  -->
-   
+
     <!-- dop page  -->
     {% block dop %}
     {% endblock dop %}
     <!-- dop page  -->
-    
+
     <!-- faculty page  -->
     {% block faculty %}
     {% endblock faculty %}
     <!-- faculty page  -->
-    
+
     <!-- administration page  -->
     {% block administration %}
     {% endblock administration %}
     <!-- administration page  -->
-   
+
     <!-- administration page  -->
     {% block institute %}
     {% endblock institute %}
@@ -270,10 +321,25 @@
     {% endblock tender %}
     <!-- tender page  -->
 
+    <!-- achivements page  -->
+    {% block achivements %}
+    {% endblock achivements %}
+    <!-- achivements page  -->
+
+    <!-- bog  -->
+    {% block bog %}
+    {% endblock bog %}
+    <!-- bog  -->
+    
+    <!-- director's page  -->
+    {% block director %}
+    {% endblock director %}
+    <!-- director's page  -->
+
     <!-- logos section  -->
     <div class="container-fluid bg-warning p-2">
       <div class="row g-1">
-      {% for l in logos %}
+        {% for l in logos %}
         <div class="col-1">
           <div class="card">
             <img src="{{l.logImg.url}}" alt="" class="card-img">
@@ -283,8 +349,6 @@
       {% endfor %}
     </div>
     <!-- logos section  -->
-
-    
 
     <!-- footer section  -->
     <section>
@@ -330,11 +394,14 @@
               <li><a href="">Subheadings</a></li>
             </ul>
           </div>
-          <h6 class="text-light">Total Visitors : {{ request.visitors }}</h6>
+          <h6 class="text-light">Total Visitors :- {{ request.visitors }}</h6>
         </div>
       </div>
     </section>
     <!-- footer section  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"></script>
   </body>
+
 </html>

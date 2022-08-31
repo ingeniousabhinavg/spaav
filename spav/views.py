@@ -1,19 +1,20 @@
 from multiprocessing import context
 from django.shortcuts import render
-from .models import Tender, Faculty, Noticeboard, Logos, FlashNews
+from .models import Tender, Faculty, Noticeboard, Logos, FlashNews, Achivements, Director
 from django.core.paginator import Paginator
 # Call the objects 
 
 flash_news = FlashNews.objects.all().order_by('-date')
 logos = Logos.objects.all()
 facultyData = Faculty.objects.all()
-
+directorData = Director.objects.all()
 # Create your views here.
 
 context = {
     'flash_news': flash_news,
     'logos':logos,
     'facultyData':facultyData,
+    'Director':directorData
 }
 
 
@@ -22,6 +23,9 @@ def index(request):
 
 def planning(request):
     return render(request, 'dop.html', context)
+
+def director(request):
+    return render(request, 'director.html', context)
 
 def noticeboard(request):
     noticeData = Noticeboard.objects.all()
@@ -50,6 +54,26 @@ def tender(request):
     'last_page':last_page
     }
     return render(request, 'tender.html',tenderDict)
+
+def about(request):
+    return render(request, 'about.html')
+
+def achivements(request):
+    achivementsData = Achivements.objects.all()
+    paginator = Paginator(achivementsData, 3)
+    page_number = request.GET.get('page')
+    final_achivementData = paginator.get_page(page_number)
+    total_page = final_achivementData.paginator.num_pages
+    last_page = final_achivementData.paginator.num_pages
+    achiveDict ={
+        'achivementsData':achivementsData,
+        'total_pages':[n+1 for n in range(total_page)],
+        'last_page':last_page
+    }
+    return render(request, 'achivements.html', achiveDict)
+
+def bog(request):
+    return render(request, 'bog.html')
 
 def rti(request):
     return render(request, 'rti.html')
