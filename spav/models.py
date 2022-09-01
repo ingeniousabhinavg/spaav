@@ -103,6 +103,23 @@ class Director(models.Model):
     def __str__(self) -> str:
         return self.name
 
+class BWC(models.Model):
+    name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=40)
+    email = models.EmailField(max_length=200)
+    joinedOn = models.DateTimeField( blank=False)
+    profile = models.ImageField(upload_to='profile', blank=False, null=True)
+    designation_choices = (
+        ('Chairperson', 'Chairperson'),
+        ('Ex-Officio - Secretary', 'Ex-Officio - Secretary'),
+        ('Member', 'Member'),
+    )
+    designation = models.CharField(max_length=100, choices=designation_choices)
+    
+
+    def __str__(self) -> str:
+        return self.name
+
 class Registrar(models.Model):
     pass
 

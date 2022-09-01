@@ -1,6 +1,6 @@
 from multiprocessing import context
 from django.shortcuts import render
-from .models import Tender, Faculty, Noticeboard, Logos, FlashNews, Achivements, Director
+from .models import Tender, Faculty, Noticeboard, Logos, FlashNews, Achivements, Director, BWC
 from django.core.paginator import Paginator
 # Call the objects 
 
@@ -8,6 +8,7 @@ flash_news = FlashNews.objects.all().order_by('-date')
 logos = Logos.objects.all()
 facultyData = Faculty.objects.all()
 directorData = Director.objects.all()
+
 # Create your views here.
 
 context = {
@@ -74,6 +75,17 @@ def achivements(request):
 
 def bog(request):
     return render(request, 'bog.html')
+
+def commitee(request):
+    return render(request, 'commitee.html')
+
+def bwc(request):
+    bwcData = BWC.objects.all()
+    bwc={
+        'bwcData':bwcData
+    }
+    return render(request, 'admin/bwc.html',bwc)
+
 
 def rti(request):
     return render(request, 'rti.html')

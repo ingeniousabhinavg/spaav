@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block bwc %}
+<section>
+    <h1 class="text-center bg-primary text-light p-4">Bulding Work's Commitee</h1>
+    <div class="container-fluid p-2">
+        <div class="row g-2">
+            {% for b in bwcData %}
+            <div class="col-sm-3">
+                <div class="card shadow-sm">
+                    <div class="card-header">{{b.designation}}</div>
+                    <img src="{{b.profile.url}}" height="250px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{b.name}}</h5>
+                    </div>
+                    <div class="card-body">
+                      <a href="#" class="card-link">{{b.phone}}</a>
+                      <a href="#" class="card-link">Another link</a>
+                    </div>
+                    <div class="card-footer"><small class="text-muted">Last Updated : {{b.joinedOn}}</small></div>
+                  </div>
+                  <br>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<br>
+{% endblock bwc %}

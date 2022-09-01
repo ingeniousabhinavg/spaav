@@ -5,6 +5,8 @@ from .import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('bog/', views.bog, name='bog'),
+    path('bwc/', views.bwc, name='bwc'),
+    path('commitee/', views.commitee, name='commitee'),
     path('director/', views.director, name='director'),
     path('about/', views.about, name='about'),
     path('achivements/', views.achivements, name='achivements'),
