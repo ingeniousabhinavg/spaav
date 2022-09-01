@@ -52,6 +52,8 @@ INSTALLED_APPS = [
 ]
 
 # Admin interface customization #
+
+
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
     "site_title": "SPAV Admin",
@@ -174,6 +176,7 @@ JAZZMIN_SETTINGS = {
     # Whether to show the UI customizer on the sidebar
     "show_ui_builder": False,
 
+
     ###############
     # Change view #
     ###############
@@ -189,6 +192,8 @@ JAZZMIN_SETTINGS = {
     # Add a language dropdown into the admin
     "language_chooser": False,
 }
+
+
 # Admin interface customization #
 
 
