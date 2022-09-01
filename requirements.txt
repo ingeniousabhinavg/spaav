@@ -10,3 +10,4 @@ sqlparse==0.4.2
 tzdata==2022.2
 whitenoise==6.2.0
 EasyVisitors
+django-baton==2.4.1
