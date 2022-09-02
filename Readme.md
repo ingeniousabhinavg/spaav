@@ -57,3 +57,7 @@ Step 02:
 - $ git add .
 - $ git commit -am "Your Commit"
 - $ git push heroku master 
+
+> Enjoy the Website 
+
+** More features will be added latter **
